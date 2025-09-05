@@ -7,7 +7,7 @@ metadata:
   name: loadbalancer-service
 spec:
   selector:
-    app.kubernetes.io/name: MyApp
+    app.kubernetes.io/name: httpd-app
   ports:
     - protocol: TCP
       port: 80
