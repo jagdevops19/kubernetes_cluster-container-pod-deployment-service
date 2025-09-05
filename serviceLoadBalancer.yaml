@@ -1,4 +1,4 @@
-#DefaultService(1ClusterIP)-2NodePort-3LoadBalancer"  service types
+#DefaultService(1ClusterIP)-2NodePort-3LoadBalancer"  service types-
 #https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
 
 apiVersion: v1
