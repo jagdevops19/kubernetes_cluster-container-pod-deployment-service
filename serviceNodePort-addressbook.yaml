@@ -1,0 +1,24 @@
+#DefaultService(1ClusterIP)-2NodePort-3LoadBalancer"  service types
+#https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodeport-service-addressbook
+spec:
+  type: NodePort
+  selector:
+    app: addressbook-pods #addressbook-pods #must match with deployment app name-->app name from addressbook-deployment.yaml#
+    #app.kubernetes.io/name: httpd-app
+    
+  ports:
+    - port: 80
+      # By default and for convenience, the `targetPort` is set to
+      # the same value as the `port` field.
+      targetPort: 80
+      # Optional field
+      # By default and for convenience, the Kubernetes control plane
+      # will allocate a port from a range (default: 30000-32767)
+      #nodePort: 30007
+      #nodePort: 30008
+      nodePort: 30009

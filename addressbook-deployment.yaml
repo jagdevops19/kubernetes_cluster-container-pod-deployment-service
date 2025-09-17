@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: addressbook-pods
+        app: addressbook-pods #must match with selector app name from addressbook-service-loadbalancer.yaml#
     spec:
       containers:
         - name: addressbook-container
