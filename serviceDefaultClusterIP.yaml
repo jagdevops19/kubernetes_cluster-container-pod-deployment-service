@@ -1,6 +1,6 @@
 #DefaultService(1ClusterIP)-2NodePort-3LoadBalancer"  service types
 #https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
-
+#default is ClusterIP type service -basic service file
 apiVersion: v1
 kind: Service
 metadata:

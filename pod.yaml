@@ -1,6 +1,7 @@
 # pod.yaml - A simple Pod definition running an HTTP server
 #https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Fx86-64%2Fstable%2Fbinary+download
 #Remember--> akms: apiVersion, kind, metadata and spec.
+Bacic Pod definition structure:
 
 apiVersion: v1
 kind: Pod

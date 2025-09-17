@@ -1,4 +1,5 @@
-#service
+#service file for httpd-app -basic 
+
 apiVersion: v1
 kind: Service
 metadata:
