@@ -1,4 +1,4 @@
-#how to delete all old files from git- cleen sweep :)
+#how to delete all old files from git- cleen sweep :)#
 
 j@i-ho kubernetes % git rm -r --cached . 
 rm 'addressbook-deployment.yaml'
