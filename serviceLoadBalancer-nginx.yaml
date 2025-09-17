@@ -1,0 +1,23 @@
+#DefaultService(1ClusterIP)-2NodePort-3LoadBalancer"  service types-
+#https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadbalancer-service-nginx
+spec:
+  selector:
+    app: nginx
+    #app.kubernetes.io/name: httpd-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
+  #clusterIP: 10.96.0.11
+  clusterIP: 10.96.0.12
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    #- ip: 192.0.2.127
+    - ip: 192.0.2.128

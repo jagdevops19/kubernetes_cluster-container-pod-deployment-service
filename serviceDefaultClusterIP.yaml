@@ -1,0 +1,14 @@
+#DefaultService(1ClusterIP)-2NodePort-3LoadBalancer"  service types
+#https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: httpd-service1
+spec:
+  selector:
+    app.kubernetes.io/name: httpd-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

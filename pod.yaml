@@ -1,0 +1,14 @@
+# pod.yaml - A simple Pod definition running an HTTP server
+#https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Fx86-64%2Fstable%2Fbinary+download
+#Remember--> akms: apiVersion, kind, metadata and spec.
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example-pod
+spec:
+  containers:
+    - name: httpd-container
+      image: httpd
+      ports:
+        - containerPort: 80

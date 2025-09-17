@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: addressbook-deployment  
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: addressbook-pods
+  template:
+    metadata:
+      labels:
+        app: addressbook-pods
+    spec:
+      containers:
+        - name: addressbook-container
+          image: jagdevops/addressbook:latest
+          ports:
+            - containerPort: 8080
+
+
+
+
+
+
+
+#kubectl create -f addressbook-deployment.yaml
+#error: resource mapping not found for name: "addressbook-deployment" namespace: "" from "addressbook-deployment.yaml": no matches for kind "Deployment" in version "extensions/v1beta1"
+#ensure CRDs are installed first#

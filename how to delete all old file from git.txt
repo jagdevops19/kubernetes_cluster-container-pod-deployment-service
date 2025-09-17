@@ -1,0 +1,40 @@
+j@i-ho kubernetes % git rm -r --cached . 
+rm 'addressbook-deployment.yaml'
+rm 'addressbookservice.yaml'
+rm 'deployment.yaml'
+rm 'deployment2.yaml'
+rm 'deployment3.yaml'
+rm 'deploymentmagic.yaml'
+rm 'pod.yaml'
+rm 'service1.yaml'
+rm 'serviceDefaultClusterIP.yaml'
+rm 'serviceLoadBalancer.yaml'
+rm 'serviceNodePort.yaml'
+rm 'simple-service.yaml'
+j@i-ho kubernetes % git add -u 
+j@i-ho kubernetes % git commit -m "Adieu-old-files"
+[main ab07c3f] Adieu-old-files
+ 12 files changed, 214 deletions(-)
+ delete mode 100644 addressbook-deployment.yaml
+ delete mode 100644 addressbookservice.yaml
+ delete mode 100644 deployment.yaml
+ delete mode 100644 deployment2.yaml
+ delete mode 100644 deployment3.yaml
+ delete mode 100644 deploymentmagic.yaml
+ delete mode 100644 pod.yaml
+ delete mode 100644 service1.yaml
+ delete mode 100644 serviceDefaultClusterIP.yaml
+ delete mode 100644 serviceLoadBalancer.yaml
+ delete mode 100644 serviceNodePort.yaml
+ delete mode 100644 simple-service.yaml
+j@i-ho kubernetes % git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (1/1), done.
+Writing objects: 100% (2/2), 197 bytes | 197.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/jagdevops19/kubernetes_cluster-container-pod-deployment-service.git
+   1c31591..ab07c3f  main -> main
+branch 'main' set up to track 'origin/main'.
+j@i-ho kubernetes % 
