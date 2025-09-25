@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue-deployment
+  labels:
+    app: blue
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: blue
+  template:
+    metadata:
+      labels:
+        app: blue
+    spec:
+      containers:
+      - name: blue-container
+        image: blue-green-app:blue
+        imagePullPolicy: Never # Use local image from Minikube's Docker daemon
+        ports:
+        - containerPort: 8080
